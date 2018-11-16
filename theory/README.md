@@ -1,4 +1,4 @@
-# Theory of Computation Sprint Challenge
+﻿# Theory of Computation Sprint Challenge
 
 ## State Machines
 
@@ -37,39 +37,34 @@
 
 Fill out truth tables for the following expressions:
 
-1. `(A ∧ ¬B)`   (alternate: `(A && !B)`)
-```
+1.	(A && !B)
 A     B     result
 -------------------
-0     0       ?
-0     1       ?
-1     0       ?
-1     1       ?
-```
+0     0       F
+0     1       F
+1     0       T
+1     1       F
 
-2. `(¬A ∨ B) ∧ ¬(A ∧ ¬B)`   (alternate: `(!A || B) && !(A && !B)`)
-```
+2.	(!A || B) && !(A && !B)
 A     B     result
 -------------------
-0     0       ?
-0     1       ?
-1     0       ?
-1     1       ?
-```
+0     0       T
+0     1       T
+1     0       F
+1     1       T
 
-3. `¬(A ∧ B) ∨ ( (A ∧ C) ∧ ¬(B ∨ ¬C) )`   (alternate: `!(A && B) || ( (A && C) && !(B || !C) )`)
-  * (Hint: Is it possible to calculate this using code?)
-```
+3.	!(A && B) || (A && C) && !(B || !C)
 A     B     C     result
 -------------------------
-0     0     0       ?
-0     0     1       ?
-0     1     0       ?
-0     1     1       ?
-1     0     0       ?
-1     0     1       ?
-1     1     0       ?
-1     1     1       ?
+0     0     0       T
+0     0     1       T
+0     1     0       T
+0     1     1       T
+1     0     0       T
+1     0     1       T
+1     1     0       F
+1     1     1       F
+
 ```
 
 ## STRETCH GOAL
