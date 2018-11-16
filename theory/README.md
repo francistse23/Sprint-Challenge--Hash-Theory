@@ -32,6 +32,28 @@
 > in an app, and they used a state machine to do it.
 
 
+                                            +--------+
+                                            | OUTPUT |
+                                            +-+----^-+
+                                              |    |
+                           WAITING FOR INPUT  |    |  Sending text to output
+                                              |    |
+                                           +--v----+--+
+                   +-----------------------> TERMINAL <-------------------------+
+                   |                       +----+-----+                         |
+                   |                            |                               |
+                   |                            |                               |
+                   |                            | ESC                           |
+                   |                            |                               |
+                   |                     +------v-------+                       +----------------------------------+
+   +---------------+        ESC[1m       |              |       ESC[....f       |                                  |
+   |   BOLD FONT   +<--------------------+ SPECIAL MODE +---------------------->+ MOVE CURSOR TO SPECIFIED LOCATION|
+   +---------------+                     |              |                       |                                  |
+                                         +--------------+                       +----------------------------------+
+
+
+
+
 
 ## Computation
 
